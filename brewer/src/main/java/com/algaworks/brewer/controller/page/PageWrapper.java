@@ -49,7 +49,8 @@ public class PageWrapper<T> {
 	}
 	
 	public String urlOrdenada(String propriedade) {
-		UriComponentsBuilder uriBuilderOrder = UriComponentsBuilder.fromUriString(uriBuilder.build(true).encode().toUriString());
+		UriComponentsBuilder uriBuilderOrder = UriComponentsBuilder
+				.fromUriString(uriBuilder.build(true).encode().toUriString());
 		
 		String valorSort = String.format("%s,%s", propriedade, inverterDirecao(propriedade));
 		
