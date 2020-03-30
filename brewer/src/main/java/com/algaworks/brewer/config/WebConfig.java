@@ -27,16 +27,21 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 
 import com.algaworks.brewer.controller.CervejasController;
 import com.algaworks.brewer.controller.converter.EstiloConverter;
+import com.algaworks.brewer.thymeleaf.BrewerDialect;
 
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 
 @Configuration
 @ComponentScan(basePackageClasses = { CervejasController.class })
 @EnableWebMvc
-
 public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
 	private ApplicationContext applicationContext;
+
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		this.applicationContext = applicationContext;
+	}
 
 	@Bean
 	public ViewResolver viewResolver() {
@@ -53,6 +58,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 		engine.setTemplateResolver(templateResolver());
 		
 		engine.addDialect(new LayoutDialect());
+		engine.addDialect(new BrewerDialect());
 		return engine;
 	}
 
@@ -63,11 +69,6 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 		resolver.setSuffix(".html");
 		resolver.setTemplateMode(TemplateMode.HTML);
 		return resolver;
-	}
-	
-	@Override
-	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-		this.applicationContext = applicationContext;
 	}
 	
 	@Override
@@ -93,7 +94,5 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 	public LocaleResolver localeResolver() {
 		return new FixedLocaleResolver(new Locale("pt", "BR"));
 	}
-	
-	
 	
 }

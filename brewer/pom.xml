@@ -18,7 +18,7 @@
 		<java.version>1.8</java.version>
 		<maven-compiler-pluging.version>3.2</maven-compiler-pluging.version>
 		<flyway-maven-plugin.version>4.0.2</flyway-maven-plugin.version>
-		<mysql-connector-java.version>5.1.39</mysql-connector-java.version>
+		<mysql-connector-java.version>5.1.48</mysql-connector-java.version>						<!--  Nao alterar-->
 
 		<!-- Spring MVC -->
 		<spring-framework.version>4.3.0.RELEASE</spring-framework.version>
@@ -47,6 +47,9 @@
 		
 		<!-- Jackson - JSON -->
 		<jackson-core.version>2.7.5</jackson-core.version>
+		<!-- thumbnailator - Gerar Thumbnail -->
+ 		<!-- https://github.com/coobird/thumbnailator -->
+		<thumbnailator.version>0.4.8</thumbnailator.version>
 	</properties>
 
 	<build>
@@ -194,6 +197,14 @@
 		    <artifactId>jackson-databind</artifactId>
 		    <version>${jackson-core.version}</version>
 		    <scope>compile</scope>
+		</dependency>
+		
+		<!-- thumbnailator - Gerar Thumbnail -->
+		<dependency>
+			<groupId>net.coobird</groupId>
+			<artifactId>thumbnailator</artifactId>
+			<version>${thumbnailator.version}</version>
+			<scope>compile</scope>
 		</dependency>
 	
 	</dependencies>
