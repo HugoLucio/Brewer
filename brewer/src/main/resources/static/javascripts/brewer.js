@@ -1,4 +1,3 @@
-  
 var Brewer = Brewer || {};
 
 Brewer.MaskMoney = (function() {
@@ -17,7 +16,36 @@ Brewer.MaskMoney = (function() {
 	
 }());
 
+Brewer.MaskPhoneNumber = (function() {
+	
+	function MaskPhoneNumber() {
+		this.inputPhoneNumber = $('.js-phone-number');
+	}
+	
+	MaskPhoneNumber.prototype.enable = function() {
+		var maskBehavior = function (val) {
+		  return val.replace(/\D/g, '').startsWith("9") ? '00 00 00 000' : '000 000 000';
+		 
+		};
+		
+		var options = {
+		  onKeyPress: function(val, e, field, options) {
+		      field.mask(maskBehavior.apply({}, arguments), options);
+		    }
+		};
+		
+		this.inputPhoneNumber.mask(maskBehavior, options);
+	}
+	
+	return MaskPhoneNumber;
+	
+}());
+
 $(function() {
 	var maskMoney = new Brewer.MaskMoney();
 	maskMoney.enable();
+	
+	var maskPhoneNumber = new Brewer.MaskPhoneNumber();
+	maskPhoneNumber.enable();
+	
 });
