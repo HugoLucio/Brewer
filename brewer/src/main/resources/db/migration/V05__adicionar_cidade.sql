@@ -1,0 +1,53 @@
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ilha de Santa Maria', 1);	  
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ilha de São Miguel', 1);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ilha Terceira', 1);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ilha Graciosa', 1);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ilha de São Jorge', 1);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ilha do Pico', 1);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ilha do Faial', 1);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ilha das Flores', 1);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ilha do Corvo', 1);
+
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Águeda', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Albergaria-a-Velha', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Anadia', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Aveiro', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Estarreja', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ílhavo', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Murtosa', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Oliveira do Bairro', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ovar', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Sever do Vouga', 2);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Vagos', 2);
+
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Aljustrel', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Almodôvar', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Alvito', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Barrancos', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Castro Verde', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Cuba', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ferreira do Alentejo', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Mértola', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Moura', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Ourique', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Serpa', 3);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Vidigueira', 3);
+
+
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Braga', 4);	  
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Braganca', 5);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Coimbra', 6);	
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Castelo Branco', 7);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Evora', 8);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Faro', 9);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Guarda', 10);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Leiria', 11);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Lisboa', 12);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Madeira', 13);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Porto', 14);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Porto Alegre', 15);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Santarem', 16);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Setubal', 17);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Vila Real', 18);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Viana do Castelo', 19);
+INSERT INTO cidade (nome, codigo_estado) VALUES ('Viseu', 20);
