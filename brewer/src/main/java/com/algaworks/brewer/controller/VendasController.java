@@ -103,11 +103,22 @@ public class VendasController {
 			return nova(venda);
 		}
 		
+//		for (ItemVenda item : venda.getItens()) {
+//			Cerveja cerveja = cervejas.findOne(item.getCerveja().getCodigo());
+//			
+//			if(cerveja.getQuantidadeEstoque() == 0) {
+//				
+//				attributes.addFlashAttribute("mensagem", "A venda não foi resgistada porque a cerveja" + cerveja.getNome() + "está esgostada");
+//				return new ModelAndView("redirect:/vendas/nova");	
+//			}else {
 		venda.setUsuario(usuarioSistema.getUsuario());
-		
+
 		cadastroVendaService.emitir(venda);
 		attributes.addFlashAttribute("mensagem", "Venda emitida com sucesso");
+
 		return new ModelAndView("redirect:/vendas/nova");
+		
+		
 	}
 	
 	@PostMapping(value = "/nova", params = "enviarEmail")
