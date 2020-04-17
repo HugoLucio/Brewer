@@ -23,8 +23,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 @Entity
 @Table(name = "venda")
+@DynamicUpdate
 public class Venda {
 
 	@Id
@@ -208,6 +211,13 @@ public class Venda {
 		return ChronoUnit.DAYS.between(inicio, LocalDate.now());
 	}
 	
+	public boolean isSalvarPermitido() {
+		return !status.equals(StatusVenda.CANCELADA);
+	}
+	
+	public boolean isSalvarProibido() {
+		return !isSalvarPermitido();
+	}
 	
 	private BigDecimal calcularValorTotal(BigDecimal valorTotalItens, BigDecimal valorFrete, BigDecimal valorDesconto) {
 		BigDecimal valorTotal = valorTotalItens
