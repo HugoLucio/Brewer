@@ -131,6 +131,10 @@ public class Cliente implements Serializable {
 		return TipoPessoa.removerFormatacao(this.cpfOuCnpj);
 	}
 
+	public boolean isNovo() {
+		return this.codigo == null;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
